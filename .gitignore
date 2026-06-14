@@ -1,0 +1,17 @@
+# Build files
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Virtual environment
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
