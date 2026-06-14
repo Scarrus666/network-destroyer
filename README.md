@@ -1,6 +1,3 @@
-Here's a comprehensive README for your project:
-
-```markdown
 # Network Scanner & Stress Tester
 
 A macOS network discovery and stress testing tool with a native GUI. Discover devices across multiple networks and perform ICMP flood attacks for network testing purposes.
