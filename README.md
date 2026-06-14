@@ -29,40 +29,6 @@ A macOS network discovery and stress testing tool with a native GUI. Discover de
 - ⚡ **Multi-threaded** - Fast scanning with 50 concurrent workers
 - 🛑 **Instant Stop** - Kill all attacks with one click
 
-## Screenshot
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│         Network Scanner & Stress Tester                      │
-│  Scan Profile: [Smart Scan (Fast) ▼]                        │
-│  [🔍 Smart Scan] [🏠 Home] [🏢 Business] [🌍 Full Scan]     │
-├────────────────┬─────────────────────────────────────────────┤
-│ Discovered     │ Log                                         │
-│ Networks       │                                             │
-│                │ ==========================================  │
-│ 📶 192.168.1.0 │ Network Scanner & Stress Tester Started    │
-│  💻 192.168.1.1│ ==========================================  │
-│  💻 192.168.1.2│ UID: 0 (Root)                              │
-│ 📶 192.168.10.0 │ Ready to scan!                             │
-│  💻 192.168.10.1│                                             │
-│  💻 192.168.10.5│ 🔍 PHASE 1: Network Discovery              │
-│                │ 📡 Finding local networks...                │
-│                │   ✓ 192.168.10.0/24 on en0                  │
-│                │   ✓ 192.168.1.0/24 (gateway responds)      │
-│                │ ✓ Found 2 network(s)                        │
-│                │                                             │
-│                │ 🔍 Scanning 508 IPs...                      │
-│                │ [+] Found: 192.168.10.1                     │
-│                │ [+] Found: 192.168.10.5                     │
-│                │ ✓ Discovery complete! Found 10 devices.     │
-├────────────────┴─────────────────────────────────────────────┤
-│ [⚡ Attack ALL] [🎯 Attack Selected] [🌐 Attack Network]     │
-│ [⏹ Stop All Attacks]                                        │
-│ ████████████░░░░░░░░░░░░░░░░ 45%                            │
-│ Status: Scanning... 230/508 (45%)                            │
-└──────────────────────────────────────────────────────────────┘
-```
-
 ## Requirements
 
 - **macOS** (tested on macOS 15 Sequoia)
@@ -85,11 +51,11 @@ brew install python-tk@3.14
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/network-scanner.git
+git clone https://github.com/Scarrus666/network-destroyer.git
 cd network-scanner
 
 # Run with sudo (required for full functionality)
-sudo python3 flood_app.py
+sudo python3 netdestroy.py
 ```
 
 ### Option 2: Build macOS App
@@ -99,7 +65,7 @@ sudo python3 flood_app.py
 pip3 install pyinstaller
 
 # Build the app
-pyinstaller --onedir --windowed --name "NetworkScanner" flood_app.py
+pyinstaller --onedir --windowed --name "NetworkScanner" netdestroy.py
 
 # Move to Applications folder
 sudo cp -r dist/NetworkScanner.app /Applications/
@@ -111,7 +77,7 @@ Now you can launch it from your Applications folder or Dock!
 
 ```bash
 # Build the app first (see above)
-pyinstaller --onedir --windowed --name "NetworkScanner" flood_app.py
+pyinstaller --onedir --windowed --name "NetworkScanner" netdestroy.py
 
 # Create a folder for DMG
 mkdir -p dist/dmg
@@ -222,7 +188,7 @@ brew install python-tk@3.14
 python3 -m venv venv
 source venv/bin/activate
 pip install pyinstaller
-pyinstaller --onedir --windowed --name "NetworkScanner" flood_app.py
+pyinstaller --onedir --windowed --name "NetworkScanner" netdestroy.py
 ```
 
 ### PyInstaller deprecation warning
@@ -242,7 +208,7 @@ macOS apps must use `--onedir` mode (`.app` bundles), not `--onefile`. This is a
 
 ```
 network-scanner/
-├── flood_app.py          # Main application
+├── netdestroy.py          # Main application
 ├── README.md             # This file
 ├── requirements.txt      # Python dependencies
 └── build/                # Build artifacts (gitignored)
