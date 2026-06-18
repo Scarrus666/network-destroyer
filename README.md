@@ -28,7 +28,7 @@ A macOS network discovery and stress testing tool with a native GUI. Discover de
 
 ## Requirements
 
-- **macOS** (tested on macOS 15 Sequoia)
+- **macOS** (tested on macOS 15 Sequoia & macOS 12 Monterey)
 - **Python 3.8+** with Tkinter support
 - **Administrator privileges** (required for ICMP flood)
 
